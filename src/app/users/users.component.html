@@ -1,0 +1,48 @@
+<div class="row">
+
+
+  <div class="col-md-6 users" [@users]="registerationData.length">
+    <div class="col-md-12">
+      <h4>Customer Details</h4>
+    </div>
+
+   <div class="col-md-12">
+   <input type="text" class="form-control"  placeholder="search by EmailId" [(ngModel)]="searchterm" />
+
+   </div>
+    <div class="col-md-12 customer"  *ngFor="let p of registerationData|customerfilter:searchterm;let i=index">
+      <div class="col-md-12">
+     <div class="col-md-8 col-xs-8 floatleft"><span>Customer Name : </span></div>
+     <div class="col-md-4 col-xs-4 floatleft">           <span>{{p.Name}}</span>
+     </div>
+
+       
+       
+      </div>
+      <div class="col-md-12">
+          <div class="col-md-8 col-xs-8 floatleft"><span>Customer Email : </span></div>
+          <div class="col-md-4 col-xs-8 floatleft">           <span>{{p.EmailId}}</span>
+          </div>
+           </div>
+      <div class="col-md-12">
+          <div class="col-md-8 col-xs-8 floatleft"><span>Customer Weight in Kg : </span></div>
+          <div class="col-md-4 col-xs-8 floatleft">           <span>{{p.Weight}}</span>
+          </div>
+           </div>
+      <div class="col-md-12">
+          <div class="col-md-12 col-xs-8 floatleft">
+            <i class="fa fa-edit" (click)=edit(i,p.EmailId)></i><i class="fa fa-trash" (click)=delete(i,p.EmailId)></i>
+          </div>
+         
+        </div>
+    </div>
+
+    <div class="col-md-12" *ngIf="registerationData.length==0">
+       
+      <div><label>No records found.</label> </div>
+       
+    </div>
+
+
+  </div>
+</div>

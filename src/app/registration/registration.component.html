@@ -1,0 +1,56 @@
+
+
+
+
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="register">
+      <div class="col-md-12">
+        <h2>{{text}} Registration</h2>
+      </div>
+      <form (ngSubmit)="Register()" [formGroup]="registrationForm">
+
+        <div class="form-row">
+          <input type="email" placeholder="email" [(ngModel)]="registrationModel.EmailId" formControlName="EmailId"
+            class="form-control">
+        </div>
+        <div class="form-row">
+          <input type="password" placeholder="password" [(ngModel)]="registrationModel.Password" formControlName="Password"
+            class="form-control">
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="full name" [(ngModel)]="registrationModel.Name" formControlName="Name" class="form-control">
+        </div>
+        <div class="form-row">
+          <input type="number" minlength="20" placeholder="weight in kg" [(ngModel)]="registrationModel.Weight" formControlName="Weight"
+            class="form-control">
+        </div>
+        <div class="form-row">
+
+            <label style="color:red;" ngClass="message?red:black"><b>{{message}}</b></label>
+          </div>
+        <div class="form-row" *ngIf="registerfalse">
+
+          <label style="color:red;"><b>User exist / Please enter correct details</b></label>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-danger" type="submit" [disabled]="!registrationForm.valid">{{text}}</button>
+        </div>
+        <div class="form-row" *ngIf="email">
+            <button class="btn btn-primary" type="button" (click)="back()">
+             Back
+            </button>
+          </div>
+          <div class="form-row">
+
+              <label style="color:red;" *ngIf="!email"><b>Please login after first time user created</b></label>
+            </div>
+      </form>
+
+
+    </div>
+  </div>
+
+</div>

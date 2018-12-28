@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+}
+.wrapper{
+    background-image: url('./assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:auto;
+    overflow-x: hidden;
+}
+.header{
+    position: fixed;
+}
+
+.fa-heart{
+    color:Red;
+}
+html, body {margin: 0; height: 100%;overflow: hidden; overflow-y: auto}
+body div:first-child{
+}
+
+.marginheader{
+    flex: 1;
+    overflow: auto;
+    background: pink;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .header, .footer {
+    background: silver;
+    z-index:200;
+  }
+  .content {
+    flex: 1;
+    overflow: auto;
+    background: pink;
+    z-index:100;
+    margin-top:75px;
+  }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+a{
+  cursor:pointer;
+}

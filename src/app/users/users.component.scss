@@ -1,0 +1,41 @@
+.col-md-3,.col-md-2,.col-md-1,.col-md-8,.col-md-4{
+    float:left;
+}
+
+.row{
+}
+.col-md-6{
+    margin:0 auto;
+    display: inline-block;
+}
+
+.fa{
+    margin: 5px;
+}
+
+.users{     margin-top: 10px;
+        color: #934848cf;
+        /* box-shadow: 2px 4px 7px -1px #1d78a5; */
+        overflow: auto;
+        border: 10px solid;
+        border-radius: 10px;
+        overflow-x: hidden;
+    }
+
+    .floatleft{
+        float: left;
+    }
+
+    .customer{
+        background-color: #ffffff7a;
+    margin: 5px 0;
+    font-weight: 800;
+    overflow: auto;
+    color: #000000;
+    }
+
+    .form-control{
+        background-color: #fb2d2d2e;
+        color:#fd4d4d;
+        font-weight: 800;
+    }

@@ -1,0 +1,27 @@
+
+<div class="header">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+  <a class="navbar-brand" href="#">
+   <img class="logo" src="../../assets/images/logo.png"/> <span>{{title}}</span> 
+  </a>
+ </div>
+ <div>
+  <div [ngbCollapse]="!isNavbarCollapsed" class="collapse navbar-collapse" id="exCollapsingNavbar2">
+    <div class="navbar-nav mr-auto">
+
+      <a class="nav-item nav-link" (click)="clear()" routerLinkActive="active">Clear local_Storage</a>
+      <a class="nav-item nav-link" routerLink="/talk" routerLinkActive="active">About</a>
+      <a class="nav-item nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        <a class="nav-item nav-link loginbtn" *ngIf="!this.globalservice.login" routerLink="/">Login</a>
+        <a class="nav-item nav-link loginbtn" (click)="logout()" *ngIf="this.globalservice.login" routerLink="/">LogOut</a>
+
+    </div>
+  </div>
+  </div>
+</nav>
+</div>
